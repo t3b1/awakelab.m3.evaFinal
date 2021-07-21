@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8d20d6c8c4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+
+
+    <title>Editar administrativo</title>
+</head>
+
+<body>
+    <header>
+        <div class="cont-img">
+            <img src="https://sermesa.es/wp-content/uploads/2019/09/prevencion-riesgos-laborales-importancia.jpg" alt="" srcset="">
+        </div>
+    </header>
+
+    <nav>
+        <a onclick="menu()"><i class="fas fa-bars"></i></a>
+
+        <div id="op-menu" class="ocultar-menu">
+            <a href="index.html">Inicio</a>
+            <a href="crearusuario.html">Crear usario</a>
+            <a href="listadousuarios.html">Listar usuarios</a>
+            <a href="crearcapacitacion.html">Crear capacitación</a>
+            <a href="listarcapacitaciones.html">Listar capacitaciones</a>
+            <a href="listadovisitas.html">Visistas</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </nav>
+    <div class="contenedor box">
+        <div class="box1">
+            <section>
+                <h3>Editar Administrativo</h3>
+
+                <form action="">
+
+                    <label for="nombre_sup">Nombre superior<span class="obligatorio">*</span></label>
+                    <input type="text" name="nombre_sup" id="" required>
+
+                    <label for="area">Area<span class="obligatorio">*</span></label>
+                    <input type="text" name="area" id="" required>
+
+                    <label for="exp_prev">Experiencia previa<span class="obligatorio">*</span></label>
+                    <input type="text" name="exp_prev" id="" required>
+
+                    <label for="funcion">Función<span class="obligatorio">*</span></label>
+                    <input type="text" name="funcion" id="" required>
+
+                    <button type="submit">Guardar</button>
+                </form>
+            </section>
+        </div>
+        <div class="box2">
+            <div>
+                <img src="https://www.aicad.es/asset//img/2/habilidades-de-un-asistente-administrativo-02.jpg" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <footer>
+        Mr. Segurito &copy; Les Cuates -
+        <script>
+            document.write(new Date().getFullYear())
+        </script>
+    </footer>
+    <script>
+        function menu() {
+
+            let elem = document.getElementById('op-menu');
+
+            if (elem.classList.contains("mostrar-menu")) {
+                elem.classList.remove("mostrar-menu");
+                elem.classList.add("ocultar-menu");
+            } else {
+                elem.classList.remove("ocultar-menu");
+                elem.classList.add("mostrar-menu");
+            }
+        }
+    </script>
+</body>
+
+</html>
