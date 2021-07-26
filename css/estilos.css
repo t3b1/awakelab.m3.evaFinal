@@ -104,10 +104,10 @@ nav {
 /* estilo formularios */
 
 form {
-    /* background-color: red; */
+    /* background-color: red; 
     padding-left: 15px;
     padding-right: 15px;
-    /* text-align: center; */
+    text-align: center; */
 }
 
 label {
@@ -133,7 +133,7 @@ input:focus {
 
 input[type=text] {
     font-size: 1em;
-    width: 90%;
+    width: 30%;
     padding: 4px;
 }
 
@@ -143,17 +143,17 @@ input[type=time] {
 
 input[type=date] {
     font-size: 1em;
-    width: 80%;
+    width: 30%;
     height: 2em;
 }
 
 input[type=number] {
     font-size: 1.1em;
-    width: 40%;
+    width: 30%;
 }
 
 textarea {
-    width: 90%;
+    width: 30%;
     border: 2px solid skyblue;
     border-radius: 5px;
     padding: 10px;
@@ -184,8 +184,8 @@ button[type=submit] {
     border: 0px solid green;
     border-radius: 10px;
     padding: 5px;
-    width: 90%;
-    box-shadow: 2px 5px #888888;
+    width: 20%;
+    box-shadow: 2px 5px 
 }
 
 button[type=submit]:hover {
@@ -496,3 +496,38 @@ footer {
 
 
 /* fin footer*/
+
+/*pagina listadoasesoria*/
+
+.form-asesoria{
+    width: 80%;
+    height: 80%;
+    margin: 200px auto;
+    border: 6px solid #362222;
+    padding: 20px 15px 20px 15px;
+    margin-top: 100px ;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #EBD4D4;
+}
+
+.form {
+    width: auto;
+    height: 80%;
+    margin: 20px auto;
+    border-radius: 0;
+    border: 0px solid #164664;
+    text-align: center;
+}
+.botone {
+    width: 0;
+    height: 2%;
+    margin: 5px;
+    margin-left: 70%;
+    
+}
+button {
+    background-color: #25801f;
+    margin-top: 100px;
+}
+/* listado asesoria fin*/
