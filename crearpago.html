@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="cont-img">
+            <img src="https://sermesa.es/wp-content/uploads/2019/09/prevencion-riesgos-laborales-importancia.jpg" alt="" srcset="">
+        </div>
+    </header>
+
+    <nav>
+        <a onclick="menu()"><i class="fas fa-bars"></i></a>
+
+        <div id="op-menu" class="ocultar-menu">
+            <a href="index.html">Inicio</a>
+            <a href="crearusuario.html">Crear usario</a>
+            <a href="listadousuarios.html">Listar usuarios</a>
+            <a href="crearcapacitacion.html">Crear capacitación</a>
+            <a href="listarcapacitaciones.html">Listar capacitaciones</a>
+            <a href="listadovisitas.html">Visistas</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </nav>
+    <div class="contenedor box">
+        <div class="box3">
+            <section>
+                <h3>Crear Pago</h3>
+
+                <form action="">
+
+                    <label for="monto">Monto a Pagar</label>
+                    <input type="number" name="monto" id="monto" required>
+
+                    <label for="ano"> </label><span class="obligatorio"></span></label>
+                    <select name="ano" id="ano"></select>
+
+                    <label for="mes"> </label><span class="obligatorio"></span></label>
+                    <select name="mes" id="mes"></select> 
+                    
+                    
+                    <label for="rut">Rut Cliente<span class="obligatorio"></span></label>
+                    <input type="number" name="rut" id="rut" required>
+
+                    <label for="fecha">Fecha Actual<span class="obligatorio"></span></label>
+                      
+                    <input type="text" name="fecha" id="fecha" disabled>
+                   
+                    <button type="submit" onclick="alerta()">Crear</button>
+                    
+                    
+                </form>
+            </section>
+        </div>
+        <script src="js/archivo.js"></script>
+        <footer>
+            Mr. Segurito &copy; Les Cuates -
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+        </footer>
+</body>
+</html>

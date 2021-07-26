@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8d20d6c8c4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Visitas</title>
+</head>
+
+<body>
+    <header>
+        <div class="cont-img">
+            <img src="https://sermesa.es/wp-content/uploads/2019/09/prevencion-riesgos-laborales-importancia.jpg" alt="" srcset="">
+        </div>
+    </header>
+
+    <nav>
+        <a onclick="menu()"><i class="fas fa-bars"></i></a>
+
+        <div id="op-menu" class="ocultar-menu">
+            <a href="index.html">Inicio</a>
+            <a href="crearusuario.html">Crear usario</a>
+            <a href="listadousuarios.html">Listar usuarios</a>
+            <a href="crearcapacitacion.html">Crear capacitación</a>
+            <a href="listarcapacitaciones.html">Listar capacitaciones</a>
+            <a href="listadovisitas.html">Visistas</a>
+            <a href="listadopago.html">Pagos</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </nav>
+
+    <div class="contenedor-tab">
+        <h3>Listado de visitas</h3>
+        <section>
+            <table>
+                <tr>
+                    <th>ID </th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Rut Cliente</th>
+                    <th>Nombre Cliente</th>
+                    <th>Listado chequeos</th>
+                </tr>
+                <tr>
+                    <td class="inif">1</td>
+                    <td>19-07-2021</td>
+                    <td>13:30</td>
+                    <td class="finf">111111111</td>
+                    <td>
+                        Cliente 1
+                    </td>
+                    <td><a href="responderchecklist.html" onclick="return confirm(mensaje())"><i class="fas fa-eye"></i></a></td>
+
+                </tr>
+                <tr>
+                    <td class="inif">2</td>
+                    <td>15-07-2021</td>
+                    <td>12:30</td>
+                    <td class="finf">222222222</td>
+                    <td>
+                        Cliente 2
+                    </td>
+                    <td><a href="responderchecklist.html" onclick="return confirm(mensaje())"><i class="fas fa-eye"></i></a></td>
+                </tr>
+                <tr>
+                    <td class="inif">3</td>
+                    <td>16-07-2021</td>
+                    <td>14:30</td>
+                    <td class="finf">333333333</td>
+                    <td>
+                        Cliente 3
+                    </td>
+                    <td><a href="responderchecklist.html" onclick="return confirm(mensaje())"><i class="fas fa-eye"></i></a></td>
+
+                </tr>
+            </table>
+
+        </section>
+    </div>
+
+    <script>
+        function mensaje() {
+            let msj = "¿Desea validar y modificar los chequeos de esta visita?";
+            return msj;
+        }
+    </script>
+    <footer>
+        Mr. Segurito &copy; Les Cuates -
+        <script>
+            document.write(new Date().getFullYear())
+        </script>
+    </footer>
+
+    <script>
+        function menu() {
+
+            let elem = document.getElementById('op-menu');
+
+            if (elem.classList.contains("mostrar-menu")) {
+                elem.classList.remove("mostrar-menu");
+                elem.classList.add("ocultar-menu");
+            } else {
+                elem.classList.remove("ocultar-menu");
+                elem.classList.add("mostrar-menu");
+            }
+        }
+    </script>
+</body>
+
+</html>
