@@ -318,6 +318,14 @@ table tr:hover {
     font-size: 1.5em;
 }
 
+
+/* clase error input */
+
+.error {
+    border-color: red;
+    background-color: #E74C3C;
+}
+
 @media (min-width: 600px) {
     .contenedor-tab {
         overflow-x: hidden;
