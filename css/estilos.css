@@ -579,3 +579,17 @@ button {
     border-radius: 10px 10px 10px 10px;
     background-color: #ebd7d7;
 }
+
+
+/*pagina listado de accidente*/
+.form-accidente {
+    width: 80%;
+    height: 80%;
+    margin: 200px auto;
+    border: 6px solid #362222;
+    padding: 20px 15px 20px 15px;
+    margin-top: 100px;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #EBD4D4;
+}
