@@ -523,3 +523,10 @@ button {
     margin-top: 100px;
 }
 /* listado asesoria fin*/
+
+.grafico {
+    width: 50%;
+    height: 10px;
+    text-align: center;
+    margin-left: 20%;
+}
