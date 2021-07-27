@@ -556,7 +556,7 @@ button {
     background-color: #25801f;
     margin-top: 100px;
 }
-<<<<<<< HEAD
+
 /* listado asesoria fin*/
 
 .grafico {
@@ -565,8 +565,17 @@ button {
     text-align: center;
     margin-left: 20%;
 }
-=======
 
+/*pagina login */
 
-/* listado asesoria fin*/
->>>>>>> 183ec5ef41e318754e9095b5febfa7bd3f3cb8c0
+.login {
+    width: 80%;
+    height: 80%;
+    margin: 20px auto;
+    border: 6px solid #e7d5d5;
+    padding: 20px 15px 20px 15px;
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #ebd7d7;
+}
