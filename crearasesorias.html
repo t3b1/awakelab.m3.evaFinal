@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Document</title>
+    <title>Crear asesorias</title>
 </head>
+
 <body>
     <header>
         <div class="cont-img">
@@ -16,15 +18,22 @@
     <div class="form-asesoria">
         <h3>Crear Asesoria</h3>
         <form action="" class="form">
-            <input type="number" placeholder="ID">
+            <input id="id" type="number" placeholder="ID">
             <br>
-            <input type="date" placeholder="fecha de realizacion">
+            <input id="fecha" type="date" placeholder="fecha de realizacion">
             <br>
-            <input type="text" placeholder="motivo de asesoria">
+
+            <textarea id="motivo" name="motivo" id="" cols="30" rows="10" placeholder="motivo de asesoria" onkeyup="contador_caracteres()" maxlength="255"></textarea><br>
+            <span>Caracteres restantes: </span><span id="contador">255</span><br>
             <br>
-            <select name="prof" id=""></select>
+            <select name="prof" id="profesional">
+                <option value=0>-- Seleccione Profesional --</option>
+                <option value=1>Felix Torres</option>
+                <option value=2>Mauricio Espinoza</option>
+                <option value=3>José Carreño</option>
+            </select>
             <br>
-            <button>Crear</button>
+            <input type="button" onclick="valida_form_asesoria()" value="Crear"></button>
 
         </form>
     </div>
@@ -34,5 +43,8 @@
             document.write(new Date().getFullYear())
         </script>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/crearasesorias.js"></script>
 </body>
+
 </html>
