@@ -185,7 +185,7 @@ button[type=submit] {
     border-radius: 10px;
     padding: 5px;
     width: 20%;
-    box-shadow: 2px 5px 
+    box-shadow: 2px 5px
 }
 
 button[type=submit]:hover {
@@ -319,6 +319,9 @@ table tr:hover {
 }
 
 
+/* fin estilo tabla*/
+
+
 /* clase error input */
 
 .error {
@@ -385,6 +388,27 @@ table tr:hover {
 
 
 /*fin estilo tabla*/
+
+
+/* diferentes estilos tabla */
+
+.dark {
+    background-color: #2b2b2b;
+    color: whitesmoke
+}
+
+.pink {
+    background-color: pink;
+    color: black;
+}
+
+.fluor {
+    background-color: #ccff00;
+    color: black;
+}
+
+
+/* fin diferentes estilos tabla*/
 
 
 /* estilo respondercheklist */
@@ -497,15 +521,16 @@ footer {
 
 /* fin footer*/
 
+
 /*pagina listadoasesoria*/
 
-.form-asesoria{
+.form-asesoria {
     width: 80%;
     height: 80%;
     margin: 200px auto;
     border: 6px solid #362222;
     padding: 20px 15px 20px 15px;
-    margin-top: 100px ;
+    margin-top: 100px;
     text-align: center;
     border-radius: 10px 10px 10px 10px;
     background-color: #EBD4D4;
@@ -519,15 +544,18 @@ footer {
     border: 0px solid #164664;
     text-align: center;
 }
+
 .botone {
     width: 0;
     height: 2%;
     margin: 5px;
     margin-left: 70%;
-    
 }
+
 button {
     background-color: #25801f;
     margin-top: 100px;
 }
+
+
 /* listado asesoria fin*/
