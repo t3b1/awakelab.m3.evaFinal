@@ -324,7 +324,7 @@ table tr:hover {
 
 /* clase error input */
 
-.error {
+.mi-error {
     border-color: red;
     background-color: #E74C3C;
 }
