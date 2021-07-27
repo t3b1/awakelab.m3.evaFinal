@@ -24,19 +24,19 @@ function alerta() {
     var mon = document.getElementById("monto");
     var rut = document.getElementById("rut");
 
-    mon.classList.remove("error");
-    rut.classList.remove("error");
+    mon.classList.remove("mi-error");
+    rut.classList.remove("mi-error");
 
     if (mon.value.length == 0 | mon.value < 0 || mon.value > 99999999) {
         alert("monto debe ser mayor o igual a cero y menor 99.999.999");
-        mon.classList.add("error");
+        mon.classList.add("mi-error");
         stat_ok = false;
 
 
     }
     if (rut.value.length < 8 || rut.value.length > 10) {
         alert("error rut");
-        rut.classList.add("error");
+        rut.classList.add("mi-error");
         stat_ok = false;
     }
 

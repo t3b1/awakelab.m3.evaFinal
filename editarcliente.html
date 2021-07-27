@@ -38,26 +38,25 @@
             <section>
                 <h3>Editar Cliente</h3>
 
-                <form action="">
+                <form id="form-edit" action="">
 
                     <label for="rut">Rut<span class="obligatorio">*</span></label>
-                    <input type="text" name="rut" id="" required>
+                    <input type="text" name="rut" id="" minlength="9" maxlength="10" required>
 
                     <label for="direccion">Dirección<span class="obligatorio">*</span></label>
-                    <input type="text" name="direccion" id="" required>
+                    <input type="text" name="direccion" id="" minlength="4" required>
 
                     <label for="comuna">Comuna<span class="obligatorio">*</span></label>
-                    <input type="text" name="comuna" id="" required>
+                    <input type="text" name="comuna" id="" minlength="4" required>
 
                     <label for="cant_e">Cantidad de empleados<span class="obligatorio">*</span></label>
-                    <input type="number" name="cant_e" id="" required>
+                    <input type="number" name="cant_e" id="" min="1" required>
 
                     <label for="tel_c">Teléfono<span class="obligatorio">*</span></label>
-                    <input type="text" name="tel_c" id="" required>
+                    <input type="text" name="tel_c" id="" minlength="9" required>
 
                     <label for="razon">Razón social<span class="obligatorio">*</span></label>
-                    <input type="text" name="razon" required>
-
+                    <input type="text" name="razon" minlength="4" required>
 
                     <button type="submit">Guardar</button>
                 </form>
@@ -77,6 +76,9 @@
             document.write(new Date().getFullYear())
         </script>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <script src="js/editarcliente.js"></script>
     <script>
         function menu() {
 
