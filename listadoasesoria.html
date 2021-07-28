@@ -5,80 +5,160 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
+    <!-- <link rel="stylesheet" href="css/estilos.css"> -->
     <script src="https://kit.fontawesome.com/8d20d6c8c4.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Listado asesoria</title>
 </head>
 
 <body>
-    <header>
-        <div class="cont-img">
-            <img src="https://sermesa.es/wp-content/uploads/2019/09/prevencion-riesgos-laborales-importancia.jpg" alt="" srcset="">
+
+    <!-- navbar bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Mr. Segurito</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Usuario
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="crearusuario.html">Crear Usuario</a></li>
+                            <li><a class="dropdown-item" href="listadousuarios.html">Listar usuarios</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Capacitación
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="crearcapacitacion.html">Crear Capacitación</a></li>
+                            <li><a class="dropdown-item" href="listarcapacitaciones.html">Listar Capacitaciones</a></li>
+                            <li><a class="dropdown-item" href="administrarasistentes.html">Administrar Asistentes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Asesoria
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="crearasesorias.html">Crear Asesoria</a></li>
+                            <li><a class="dropdown-item" href="listadoasesoria.html">Listar Asesoria</a></li>
+                            <li><a class="dropdown-item" href="reportes.html">Reportes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listadovisitas.html">Listado Visitas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listadopago.html">Pagos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <div class="form-asesoria">
-        <h3>Listado asesoria</h3>
-        <table id="tab-asesoria">
-            <tr>
-                <td colspan="4">IDasesoria</td>
-                <td>fecha de realizacion</td>
-                <td>Nombre Cliente</td>
-                <td>Nombre Profesional</td>
-                <td><i class="fas fa-eye"></i></td>
-            </tr>
-            <tr>
-                <td colspan="4">000000001</td>
-                <td>26/10/2019</td>
-                <td>fruna s.p.a</td>
-                <td>francisca del rio</td>
-                <td><i class="fas fa-eye"></i></td>
-            </tr>
-            <tr>
-                <td colspan="4">000000001</td>
-                <td>26/10/2019</td>
-                <td>fruna s.p.a</td>
-                <td>francisca del rio</td>
-                <td><i class="fas fa-eye"></i></td>
-            </tr>
-            <tr>
-                <td colspan="4">000000001</td>
-                <td>26/10/2019</td>
-                <td>fruna s.p.a</td>
-                <td>francisca del rio</td>
-                <td><i class="fas fa-eye"></i></td>
-            </tr>
-            <tr>
-                <td colspan="4">000000001</td>
-                <td>26/10/2019</td>
-                <td>fruna s.p.a</td>
-                <td>francisca del rio</td>
-                <td><i class="fas fa-eye"></i></td>
-            </tr>
-            <tr>
-                <td colspan="4">000000001</td>
-                <td>26/10/2019</td>
-                <td>fruna s.p.a</td>
-                <td>francisca del rio</td>
-                <td><i class="fas fa-eye"></i></td>
-            </tr>
-        </table>
+    <section>
+        <div class="container">
 
 
-        <button onclick="cambia_color('dark')">diseño dark</button>
-        <button onclick="cambia_color('pink')">diseño pink</button>
-        <button onclick="cambia_color('fluor')">diseño fluor</button>
-    </div>
+            <div class="row">
+                <div class="col-12">
+                    <h3>Listado asesoria</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <table id="tab-asesoria" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">IDasesoria</th>
+                                <th scope="col">fecha de realizacion</th>
+                                <th scope="col">Nombre Cliente</th>
+                                <th scope="col">Nombre Profesional</th>
+                                <th scope="col">Acción</th>
+                            </tr>
+                        </thead>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/archivo.js"></script>
+                        <tbody>
+                            <tr>
+                                <th scope="row">000000001</th>
+                                <td>26/10/2019</td>
+                                <td>fruna s.p.a</td>
+                                <td>francisca del rio</td>
+                                <td><i class="fas fa-eye"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">000000002</th>
+                                <td>26/10/2019</td>
+                                <td>fruna s.p.a</td>
+                                <td>francisca del rio</td>
+                                <td><i class="fas fa-eye"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">000000003</th>
+                                <td>26/10/2019</td>
+                                <td>fruna s.p.a</td>
+                                <td>francisca del rio</td>
+                                <td><i class="fas fa-eye"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">000000004</th>
+                                <td>26/10/2019</td>
+                                <td>fruna s.p.a</td>
+                                <td>francisca del rio</td>
+                                <td><i class="fas fa-eye"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">000000005</th>
+                                <td>26/10/2019</td>
+                                <td>fruna s.p.a</td>
+                                <td>francisca del rio</td>
+                                <td><i class="fas fa-eye"></i></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <button type="button" class="btn btn-primary" onclick="cambia_color('dark')">diseño dark</button>
+                    <button type="button" class="btn btn-primary" onclick="cambia_color('success')">diseño success</button>
+                    <button type="button" class="btn btn-primary" onclick="cambia_color('striped')">diseño striped</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <footer>
         Mr. Segurito &copy; Les Cuates -
         <script>
             document.write(new Date().getFullYear())
         </script>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/listadoasesoria.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -3,6 +3,7 @@ function contador_caracteres() {
     cont -= $("#lugar").val().length
     $("#contador").text(cont);
 }
+
 function contador_caracter() {
     let cont = 100;
     cont -= $("#origen").val().length
@@ -17,11 +18,11 @@ function valida_form_accidente() {
     let mes = parseInt(fecha[1]);
     let dia = fecha[2];
     const fecha_actual = new Date();
-    let hora =$("#hora").val().split("");
+    let hora = $("#hora").val().split("");
     let cliente = $("#cliente").val();
 
     let lugar = $("#lugar").val().replace(/ /g, "");
-    let origen = $("#origen").val().replace(/ /g,"");
+    let origen = $("#origen").val().replace(/ /g, "");
 
     if (id > 0 && id <= 10000) {
         if (anio <= fecha_actual.getFullYear()) {
@@ -30,32 +31,32 @@ function valida_form_accidente() {
                     fecha = dia + "-" + mes + "-" + anio; // se guarda fecha en formato dd-mm-yyyy
                     if (lugar.length > 0) {
 
-                        if (origen.length > 0){
+                        if (origen.length > 0) {
 
-                            if (hora == ) {
+                            if (hora) {
 
-                                if (cliente.length > 0){
+                                if (cliente.length > 0) {
 
                                     if ($("#cliente option:selected").val() > 0) {
-            
-                                    
+
+
                                     } else {
                                         alert("Debe seleccionar un cliente");
                                     }
 
-                                }else {
+                                } else {
                                     alert("ingresecliente");
                                 }
-                            }else {
+                            } else {
                                 alert("ingrese hora");
                             }
 
-                        } else { 
+                        } else {
                             alert("debe escribir origen del accidente");
                         }
                     } else {
                         alert("Debe escribir del accidente");
-                    } 
+                    }
                 } else {
                     alert("");
                 }

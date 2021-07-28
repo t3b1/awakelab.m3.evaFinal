@@ -1,5 +1,6 @@
 section {
     margin-top: 40px;
+    padding-bottom: 300px;
 }
 
 .contenedor-texto {
@@ -21,4 +22,37 @@ section {
     height: 100%;
     object-fit: cover;
     padding-top: 5%;
+}
+
+#contenedor-login {
+    margin-top: 50px;
+    background-color: #212529;
+    color: whitesmoke;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contenedor-login input {
+    /* background-color: #f7f9e4; */
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    line-height: 100px;
 }

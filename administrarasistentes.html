@@ -1,108 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    <link rel="stylesheet" href="css/estilos.css">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+    <!-- <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="css/estilos.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Administrar asistentes</title>
 </head>
+
 <body>
- 
-    <div class="form-asesoria">
-        <h3>Listado asistentes</h3>
-        <table id="table_id" class="display"><font></font>
-            <thead><font></font>
-                <tr><font></font>
-                    <th>ID de Asistente</th><font></font>
-                    <th>Correo Electronico</th><font></font>
-                    <th>Telefono</th><font></font>
-                </tr><font></font>
-            </thead><font></font>
-            <tbody><font></font>
-                <tr><font></font>
-                    <td>000001</td><font></font>
-                    <td>tontin@gmail.com</td><font></font>
-                    <td>+5692111544</td><font></font>
-                </tr><font></font>
-                <tr><font></font>
-                    <td>000002</td><font></font>
-                    <td>rata@alcantarilla.com</td><font></font>
-                    <td>+569878797</td><font></font>
-                </tr><font></font>
-                <tr><font></font>
-                    <td>000003</td><font></font>
-                    <td>backyardigan@gmail.com</td><font></font>
-                    <td>+569256447</td><font></font>
-                </tr><font></font>
-                <tr><font></font>
-                    <td>000004</td><font></font>
-                    <td>rupertina@gmail.com</td><font></font>
-                    <td>+569256447</td><font></font>
-                </tr><font></font>
-                <tr><font></font>
-                    <td>000005</td><font></font>
-                    <td>franco.el@grila.com</td><font></font>
-                    <td>+5694541225</td><font></font>
-                </tr><font></font>
-                <tr><font></font>
-                    <td>000006</td><font></font>
-                    <td>elgato.felix@kesillos.com</td><font></font>
-                    <td>+5698752547</td><font></font>
-                </tr><font></font>
-                <tr><font></font>
-                    <td>000007</td><font></font>
-                    <td>di.maria@gmail.com</td><font></font>
-                    <td>+569588511</td><font></font>
-                </tr><font></font>
-                <tr><font></font>
-                    <td>000008</td><font></font>
-                    <td>maria.esp@gmail.com</td><font></font>
-                    <td>+569755847</td><font></font>
-                </tr><font></font>
-                <tr><font></font>
-                    <td>000009</td><font></font>
-                    <td>el.brayatan@chorizo.com</td><font></font>
-                    <td>+5696665747</td><font></font>
-                </tr><font></font>
-                <tr><font></font>
-                    <td>000010</td><font></font>
-                    <td>felipin@gmail.com</td><font></font>
-                    <td>+5694774827</td><font></font>
-                </tr><font></font>
-            </tbody><font></font>
-        </table><font></font>
-       
-        
-            <form action="">
-                <input type="number" id="id" placeholder="idasistente">
-                <input type="text" id="nombre" placeholder="Nombre Completo" onkeyup="contador_caracteres()" maxlength="150">
-                
-                <input type="number" id="edad" placeholder="Edad">
-                <input type="text" id="correo" placeholder="Correo Electronico">
-                <span id="correook"></span>
-                <input type="number" id="telefono" placeholder="+569XXXXXXXX">
-                <input type="text" id="fech" placeholder="fecha-hora y cliente">
-            </form>
-            <button onclick="validar()">Crear</button>
-            <button>Eliminar</button>
-        
+
+    <!-- navbar bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Mr. Segurito</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Usuario
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="crearusuario.html">Crear Usuario</a></li>
+                            <li><a class="dropdown-item" href="listadousuarios.html">Listar usuarios</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Capacitación
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="crearcapacitacion.html">Crear Capacitación</a></li>
+                            <li><a class="dropdown-item" href="listarcapacitaciones.html">Listar Capacitaciones</a></li>
+                            <li><a class="dropdown-item" href="administrarasistentes.html">Administrar Asistentes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Asesoria
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="crearasesorias.html">Crear Asesoria</a></li>
+                            <li><a class="dropdown-item" href="listadoasesoria.html">Listar Asesoria</a></li>
+                            <li><a class="dropdown-item" href="reportes.html">Reportes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listadovisitas.html">Listado Visitas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listadopago.html">Pagos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-asesoria">
+                        <h3>Listado asistentes</h3>
+                        <table id="table_id" class="display">
+                            <thead>
+                                <tr>
+                                    <th>ID de Asistente</th>
+                                    <th>Correo Electronico</th>
+                                    <th>Telefono</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>000001</td>
+                                    <td>tontin@gmail.com</td>
+                                    <td>+5692111544</td>
+                                </tr>
+                                <tr>
+                                    <td>000002</td>
+                                    <td>rata@alcantarilla.com</td>
+                                    <td>+569878797</td>
+                                </tr>
+                                <tr>
+                                    <td>000003</td>
+                                    <td>backyardigan@gmail.com</td>
+                                    <td>+569256447</td>
+                                </tr>
+                                <tr>
+                                    <td>000004</td>
+                                    <td>rupertina@gmail.com</td>
+                                    <td>+569256447</td>
+                                </tr>
+                                <tr>
+                                    <td>000005</td>
+                                    <td>franco.el@grila.com</td>
+                                    <td>+5694541225</td>
+                                </tr>
+                                <tr>
+                                    <td>000006</td>
+                                    <td>elgato.felix@kesillos.com</td>
+                                    <td>+5698752547</td>
+                                </tr>
+                                <tr>
+                                    <td>000007</td>
+                                    <td>di.maria@gmail.com</td>
+                                    <td>+569588511</td>
+                                </tr>
+                                <tr>
+                                    <td>000008</td>
+                                    <td>maria.esp@gmail.com</td>
+                                    <td>+569755847</td>
+                                </tr>
+                                <tr>
+                                    <td>000009</td>
+                                    <td>el.brayatan@chorizo.com</td>
+                                    <td>+5696665747</td>
+                                </tr>
+                                <tr>
+                                    <td>000010</td>
+                                    <td>felipin@gmail.com</td>
+                                    <td>+5694774827</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <form action="">
+
+                        <div class="mb-3">
+                            <input class="form-control" id="idAsistente" type="text" placeholder="ID Asistente">
+                        </div>
+
+                        <div class="mb-3">
+                            <input class="form-control" id="nombre" type="text" placeholder="Nombre Completo">
+                        </div>
+
+                        <div class="mb-3">
+                            <input class="form-control" id="edad" type="number" placeholder="Edad">
+                        </div>
+
+                        <div class="mb-3">
+                            <input class="form-control" id="correo" type="email" placeholder="Correo Electrónico">
+                        </div>
+
+                        <div class="mb-3">
+                            <input class="form-control" id="telefono" type="number" placeholder="Ej: +569 XXXXXXXX">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="fecha" class="form-label">Fecha</label>
+                            <input class="form-control" id="fecha" type="date">
+                        </div>
+                        <button type="button" class="btn btn-success" onclick="validar()">Crear</button>
+                        <button type="button" class="btn btn-danger">Eliminar</button>
+                    </form>
+                </div>
+            </div>
+    </section>
+
+
+
+
+
     </div>
     <footer>
         Mr. Segurito &copy; Les Cuates -
-         <script>
-             document.write(new Date().getFullYear());
+        <script>
+            document.write(new Date().getFullYear());
 
-             $(document).ready( function () {
-             $('#myTable').DataTable();
-             } );
-         </script>
+            $(document).ready(function() {
+                $('#myTable').DataTable();
+            });
+        </script>
     </footer>
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+
     <script src="js/adminasistentes.js"></script>
 
 </body>
+
 </html>

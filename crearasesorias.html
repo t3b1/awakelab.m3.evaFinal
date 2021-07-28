@@ -5,46 +5,129 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
+    <!-- <link rel="stylesheet" href="css/estilos.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
     <title>Crear asesorias</title>
 </head>
 
 <body>
-    <header>
-        <div class="cont-img">
-            <img src="https://sermesa.es/wp-content/uploads/2019/09/prevencion-riesgos-laborales-importancia.jpg" alt="" srcset="">
+
+    <!-- navbar bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Mr. Segurito</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Usuario
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="crearusuario.html">Crear Usuario</a></li>
+                            <li><a class="dropdown-item" href="listadousuarios.html">Listar usuarios</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Capacitación
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="crearcapacitacion.html">Crear Capacitación</a></li>
+                            <li><a class="dropdown-item" href="listarcapacitaciones.html">Listar Capacitaciones</a></li>
+                            <li><a class="dropdown-item" href="administrarasistentes.html">Administrar Asistentes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Asesoria
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="crearasesorias.html">Crear Asesoria</a></li>
+                            <li><a class="dropdown-item" href="listadoasesoria.html">Listar Asesoria</a></li>
+                            <li><a class="dropdown-item" href="reportes.html">Reportes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listadovisitas.html">Listado Visitas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listadopago.html">Pagos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
-    <div class="form-asesoria">
-        <h3>Crear Asesoria</h3>
-        <form action="" class="form">
-            <input id="id" type="number" placeholder="ID">
-            <br>
-            <input id="fecha" type="date" placeholder="fecha de realizacion">
-            <br>
+    </nav>
 
-            <textarea id="motivo" name="motivo" id="" cols="30" rows="10" placeholder="motivo de asesoria" onkeyup="contador_caracteres()" maxlength="255"></textarea><br>
-            <span>Caracteres restantes: </span><span id="contador">255</span><br>
-            <br>
-            <select name="prof" id="profesional">
-                <option value=0>-- Seleccione Profesional --</option>
-                <option value=1>Felix Torres</option>
-                <option value=2>Mauricio Espinoza</option>
-                <option value=3>José Carreño</option>
-            </select>
-            <br>
-            <input type="button" onclick="valida_form_asesoria()" value="Crear"></button>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Crear Asesoria</h3>
 
-        </form>
-    </div>
+                    <form action="" class="form">
+
+                        <div class="mb-3">
+                            <label for="id" class="form-label">ID Asesoría</label>
+                            <input class="form-control" id="id" type="number" required>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="fecha" class="form-label">Fecha de realizacion</label>
+                            <input class="form-control" id="fecha" type="date" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="motivo" class="form-label">Motivo de asesoría</label>
+                            <textarea class="form-control" id="motivo" rows="6" onkeyup="contador_caracteres()" maxlength="255"></textarea>
+                            <span>Caracteres restantes: </span><span id="contador">255</span>
+                        </div>
+
+                        <div class="mb-3">
+                            <select id="profesional" name="prof" class="form-select">
+                                <option value=0>-- Seleccione Profesional --</option>
+                                <option value=1>Felix Torres</option>
+                                <option value=2>Mauricio Espinoza</option>
+                                <option value=3>José Carreño</option>
+                              </select>
+                        </div>
+
+                        <button type="button" class="btn btn-success" onclick="valida_form_asesoria()">Crear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         Mr. Segurito &copy; Les Cuates -
         <script>
             document.write(new Date().getFullYear())
         </script>
     </footer>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <script src="js/crearasesorias.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>

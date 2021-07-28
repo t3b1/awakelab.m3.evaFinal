@@ -1,25 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
-    <title>Document</title>
-</head>
-<body>
-    
-    <div class="login-form">
-            <form id="login" action="#">
-                <input type="text" name="rut" id="rut" placeholder="RUT" />
-                <br>
-                <input type="password" name="contra" id="contra" placeholder="Contraseña" />
-                <br>
-                <button onclick="validar()">Ingresar</button>
-            </form>
+    <!-- <link rel="stylesheet" href="css/estilos.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 
-    </div>
-    
+    <title>login</title>
+</head>
+
+<body>
+    <!-- navbar bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Mr. Segurito</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Usuario
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="crearusuario.html">Crear Usuario</a></li>
+                            <li><a class="dropdown-item" href="listadousuarios.html">Listar usuarios</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Capacitación
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="crearcapacitacion.html">Crear Capacitación</a></li>
+                            <li><a class="dropdown-item" href="listarcapacitaciones.html">Listar Capacitaciones</a></li>
+                            <li><a class="dropdown-item" href="administrarasistentes.html">Administrar Asistentes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Asesoria
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="crearasesorias.html">Crear Asesoria</a></li>
+                            <li><a class="dropdown-item" href="listadoasesoria.html">Listar Asesoria</a></li>
+                            <li><a class="dropdown-item" href="reportes.html">Reportes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listadovisitas.html">Listado Visitas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listadopago.html">Pagos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container">
+            <div id="contenedor-login" class="row col-6">
+                <div class="col-12">
+                    <form id="login">
+
+                        <div class="mb-3">
+                            <h3>Iniciar Sesión</h3>
+                        </div>
+                        <div class="mb-3">
+                            <label for="rut" class="form-label">RUT</label>
+                            <input class="form-control" id="rut" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contra" class="form-label">Contraseña</label>
+                            <input class="form-control" id="contra" type="password" maxlength="20">
+                        </div>
+                        <!-- 
+                        <input type="password" name="contra" id="contra" placeholder="Contraseña" />
+                        <br> -->
+
+                        <button type="button" class="btn btn-success" onclick="validar()">Ingresar</button>
+                        <!-- <button>Ingresar</button> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <div class="login-form">
+
+
+    </div> -->
+
     <footer>
         Mr. Segurito &copy; Les Cuates -
         <script>
@@ -27,6 +114,8 @@
         </script>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="js/login.js"></script>
 </body>
+
 </html>
