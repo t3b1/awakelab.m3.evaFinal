@@ -6,72 +6,119 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8d20d6c8c4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/estilos.css">
+    <!-- <link rel="stylesheet" href="css/estilos.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
     <title>Listado Pagos</title>
 </head>
 
 <body>
-    <header>
-        <div class="cont-img">
-            <img src="https://sermesa.es/wp-content/uploads/2019/09/prevencion-riesgos-laborales-importancia.jpg" alt="" srcset="">
-        </div>
-    </header>
 
-    <nav>
-        <a onclick="menu()"><i class="fas fa-bars"></i></a>
-
-        <div id="op-menu" class="ocultar-menu">
-            <a href="index.html">Inicio</a>
-            <a href="crearusuario.html">Crear usario</a>
-            <a href="listadousuarios.html">Listar usuarios</a>
-            <a href="crearcapacitacion.html">Crear capacitación</a>
-            <a href="listarcapacitaciones.html">Listar capacitaciones</a>
-            <a href="listadovisitas.html">Visistas</a>
-            <a href="listadopago.html">Pagos</a>
-            <a href="contacto.html">Contacto</a>
+    <!-- navbar bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Mr. Segurito</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Usuario
+                    </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="crearusuario.html">Crear Usuario</a></li>
+                            <li><a class="dropdown-item" href="listadousuarios.html">Listar usuarios</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Capacitación
+                    </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="crearcapacitacion.html">Crear Capacitación</a></li>
+                            <li><a class="dropdown-item" href="listarcapacitaciones.html">Listar Capacitaciones</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listadovisitas.html">Listado Visitas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listadopago.html">Pagos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <div class="contenedor-tab">
-        <h3>Listado de pagos</h3>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Listado de pagos</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
 
-        <section>
+                </div>
+            </div>
+
+
+
 
             <div id="cont-nuevo-pago">
-                <a href="crearpago.html"><i class="far fa-plus-square"></i> Crear Pago</a>
+                <a href="crearpago.html"> <button type="button" class="btn btn-link"><i class="far fa-plus-square"></i> Crear Pago</button></a>
             </div>
-            <table>
-                <tr>
-                    <th>ID Pago </th>
-                    <th>Mes</th>
-                    <th>Año</th>
-                    <th>Rut Cliente</th>
-                    <th>Nombre Cliente</th>
-                </tr>
-                <tr>
-                    <td class="inif">1</td>
-                    <td>Enero</td>
-                    <td>2020</td>
-                    <td>111111111</td>
-                    <td class="finf">Cliente 1</td>
-                </tr>
-                <tr>
-                    <td class="inif">2</td>
-                    <td>Enero</td>
-                    <td>2020</td>
-                    <td>222222222</td>
-                    <td class="finf">Cliente 2</td>
-                </tr>
-                <tr>
-                    <td class="inif">3</td>
-                    <td>Enero</td>
-                    <td>2020</td>
-                    <td>333333333</td>
-                    <td class="finf">Cliente 3</td>
-                </tr>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID Pago </th>
+                        <th scope="col">Mes</th>
+                        <th scope="col">Año</th>
+                        <th scope="col">Rut Cliente</th>
+                        <th scope="col">Nombre Cliente</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Enero</td>
+                        <td>2020</td>
+                        <td>111111111</td>
+                        <td class="finf">Cliente 1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Enero</td>
+                        <td>2020</td>
+                        <td>222222222</td>
+                        <td>Cliente 2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Enero</td>
+                        <td>2020</td>
+                        <td>333333333</td>
+                        <td>Cliente 3</td>
+                    </tr>
+                </tbody>
+
             </table>
-        </section>
-    </div>
+
+        </div>
+    </section>
+
     <footer>
         Mr. Segurito &copy; Les Cuates -
         <script>
@@ -79,21 +126,8 @@
         </script>
     </footer>
 
-
-    <script>
-        function menu() {
-
-            let elem = document.getElementById('op-menu');
-
-            if (elem.classList.contains("mostrar-menu")) {
-                elem.classList.remove("mostrar-menu");
-                elem.classList.add("ocultar-menu");
-            } else {
-                elem.classList.remove("ocultar-menu");
-                elem.classList.add("mostrar-menu");
-            }
-        }
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>

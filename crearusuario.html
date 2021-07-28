@@ -6,72 +6,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8d20d6c8c4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/estilos.css">
+    <!-- <link rel="stylesheet" href="css/estilos.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
     <title>Crear usuario</title>
 </head>
 
 <body>
-    <header>
-        <div class="cont-img">
-            <img src="https://sermesa.es/wp-content/uploads/2019/09/prevencion-riesgos-laborales-importancia.jpg" alt="" srcset="">
-        </div>
-    </header>
 
-    <nav>
-        <a onclick="menu()"><i class="fas fa-bars"></i></a>
-
-        <div id="op-menu" class="ocultar-menu">
-            <a href="index.html">Inicio</a>
-            <a href="crearusuario.html">Crear usario</a>
-            <a href="listadousuarios.html">Listar usuarios</a>
-            <a href="crearcapacitacion.html">Crear capacitación</a>
-            <a href="listarcapacitaciones.html">Listar capacitaciones</a>
-            <a href="listadovisitas.html">Visistas</a>
-            <a href="listadopago.html">Pagos</a>
-            <a href="contacto.html">Contacto</a>
+    <!-- navbar bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Mr. Segurito</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Usuario
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="crearusuario.html">Crear Usuario</a></li>
+                            <li><a class="dropdown-item" href="listadousuarios.html">Listar usuarios</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Capacitación
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="crearcapacitacion.html">Crear Capacitación</a></li>
+                            <li><a class="dropdown-item" href="listarcapacitaciones.html">Listar Capacitaciones</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listadovisitas.html">Listado Visitas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listadopago.html">Pagos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <div class="contenedor box">
-        <div class="box1">
-            <section>
-                <h3>Crear usuario</h3>
-
-                <form action="">
-
-                    <label for="nombres">Nombres<span class="obligatorio">*</span></label>
-                    <input type="text" name="nombres" id="" required>
-
-                    <label for="apellidos">Apellidos<span class="obligatorio">*</span></label>
-                    <input type="text" name="apellidos" id="" required>
-
-                    <label for="fecha_n">Fecha de nacimiento<span class="obligatorio">*</span></label>
-                    <input type="date" name="fecha_n" id="" required>
-
-                    <label for="run">Run<span class="obligatorio">*</span></label>
-                    <input type="text" name="run" required>
-
-                    <label for="tipo_u">Tipo de usuario<span class="obligatorio">*</span></label>
-                    <select name="tipo_u" id="">
-                        <option value="0" selected>Seleccione tipo de usuario</option>
-                        <option value="1">Cliente</option>
-                        <option value="2">Profesional</option>
-                        <option value="3">Administrador</option>
-                    </select>
+    <section>
 
 
-                    <button type="submit">Crear</button>
-                </form>
-            </section>
-        </div>
-        <div class="box2">
-            <div>
-                <img src="https://www.ipnie.com/wp-content/uploads/2021/02/profile.jpeg" alt="" srcset="">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-6">
+                    <h3>Crear usuario</h3>
+                    <form action="">
+
+                        <div class="mb-3">
+                            <label for="nombres" class="form-label">Nombres</label>
+                            <input class="form-control" id="nombres" type="text" placeholder="Ej: Brian Felipe">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="apellidos" class="form-label">Apellidos</label>
+                            <input class="form-control" id="apellidos" type="text" placeholder="Ej: Guzmán Kessi">
+                        </div>
+                        <div class="mb-3">
+                            <label for="fecha_n" class="form-label">Nombres</label>
+                            <input class="form-control" id="fecha_n" type="date">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="run" class="form-label">Run</label>
+                            <input class="form-control" id="run" type="text" placeholder="Ej: 111111111-1">
+                        </div>
+
+                        <div class="mb-3">
+                            <select class="form-select" aria-label="Default select example">
+                            <option value="0" selected>Seleccione tipo de usuario</option>
+                            <option value="1">Cliente</option>
+                            <option value="2">Profesional</option>
+                            <option value="3">Administrador</option>
+                          </select>
+                        </div>
+
+                        <button type="button" class="btn btn-success">Crear</button>
+                    </form>
+                </div>
+                <div class="contenedor-img col-sm-12 col-lg-6">
+                    <img src="https://www.ipnie.com/wp-content/uploads/2021/02/profile.jpeg" alt="" srcset="">
+                </div>
             </div>
-
         </div>
-
-    </div>
+    </section>
 
     <footer>
         Mr. Segurito &copy; Les Cuates -
@@ -79,22 +113,8 @@
             document.write(new Date().getFullYear())
         </script>
     </footer>
-
-    <script>
-        function menu() {
-
-            let elem = document.getElementById('op-menu');
-
-            if (elem.classList.contains("mostrar-menu")) {
-                elem.classList.remove("mostrar-menu");
-                elem.classList.add("ocultar-menu");
-            } else {
-                elem.classList.remove("ocultar-menu");
-                elem.classList.add("mostrar-menu");
-            }
-        }
-    </script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>

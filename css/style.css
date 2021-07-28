@@ -1,0 +1,24 @@
+section {
+    margin-top: 40px;
+}
+
+.contenedor-texto {
+    padding-top: 60px;
+    text-align: center;
+}
+
+.contenedor-texto p {
+    padding-top: 20px;
+    text-align: justify;
+}
+
+.contenedor-img {
+    text-align: center;
+}
+
+.contenedor-img>img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    padding-top: 5%;
+}
