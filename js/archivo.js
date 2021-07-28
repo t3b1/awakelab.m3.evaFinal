@@ -22,7 +22,6 @@ function cambia_color(estilo) {
         tabla.removeClass("pink");
         tabla.addClass("fluor");
     }
-<<<<<<< HEAD
 }
 
 //función encargada de generar automáticamente un listado de años para rellenar un elemento select
@@ -86,6 +85,3 @@ function alerta() {
     }
 }
 
-=======
-}
->>>>>>> b1c70878c46b13735ce75ebea7911a27fffee974

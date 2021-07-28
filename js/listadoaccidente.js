@@ -17,7 +17,7 @@ function valida_form_accidente() {
     let mes = parseInt(fecha[1]);
     let dia = fecha[2];
     const fecha_actual = new Date();
-    let hora =$("#hora").val().time;
+    let hora =$("#hora").val().split("");
     let cliente = $("#cliente").val();
 
     let lugar = $("#lugar").val().replace(/ /g, "");
@@ -32,14 +32,15 @@ function valida_form_accidente() {
 
                         if (origen.length > 0){
 
-                            if (hora == time) {
+                            if (hora == ) {
 
                                 if (cliente.length > 0){
 
                                     if ($("#cliente option:selected").val() > 0) {
+            
                                     
                                     } else {
-                                        alert("Debe seleccionar un profesional");
+                                        alert("Debe seleccionar un cliente");
                                     }
 
                                 }else {

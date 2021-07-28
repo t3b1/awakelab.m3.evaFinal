@@ -8,29 +8,25 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <div class="cont-img">
-            <img src="" alt="" srcset="">
-        </div>
-    </header>
-    <div class="login">
-            <form class="login-form" action="">
-                <input type="text" id="loginrut" placeholder="RUT" />
+    
+    <div class="login-form">
+            <form id="login" action="#">
+                <input type="text" name="rut" id="rut" placeholder="RUT" />
                 <br>
-                <input type="password" id="logincontra" placeholder="Contraseña" />
+                <input type="password" name="contra" id="contra" placeholder="Contraseña" />
                 <br>
                 <button onclick="validar()">Ingresar</button>
             </form>
 
     </div>
-    <script>
-    </script>
+    
     <footer>
         Mr. Segurito &copy; Les Cuates -
         <script>
             document.write(new Date().getFullYear())
         </script>
     </footer>
-    <script src="js/archivo2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>

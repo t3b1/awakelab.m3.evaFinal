@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="css/estilos.css">
     <title>Document</title>
 </head>
@@ -15,43 +17,69 @@
     </header>
     <div class="form-asesoria">
         <h3>Listado asistentes</h3>
-        <table class="">
-            <tr>
-                <td colspan="4">IDasistente</td>
-                <td>correo electronico</td>
-                <td>Telefono</td>
-            </tr>
-            <tr>
-                <td colspan="4">000000001</td>
-                <td>26/10/2019</td>
-                <td>fruna s.p.a</td>
-            </tr>
-            <tr>
-                <td colspan="4">000000001</td>t
-                <td>26/10/2019</td>
-                <td>fruna s.p.a</td>
-            </tr>
-            <tr>
-                <td colspan="4">000000001</td>
-                <td>26/10/2019</td>
-                <td>fruna s.p.a</td>
-            </tr>
-            <tr>
-                <td colspan="4">000000001</td>
-                <td>26/10/2019</td>
-                <td>+56984455555</td>
-            </tr>
-            <tr>
-                <td colspan="4"></td>
-                <td>donde@jil.cl</td>
-                <td>+569854455</td>
-               
-            </tr>
-            
-            
-
-        </table>
-        <div>
+        <table id="table_id" class="display"><font></font>
+            <thead><font></font>
+                <tr><font></font>
+                    <th>ID de Asistente</th><font></font>
+                    <th>Correo Electronico</th><font></font>
+                    <th>Telefono</th><font></font>
+                </tr><font></font>
+            </thead><font></font>
+            <tbody><font></font>
+                <tr><font></font>
+                    <td>000001</td><font></font>
+                    <td>tontin@gmail.com</td><font></font>
+                    <td>+5692111544</td><font></font>
+                </tr><font></font>
+                <tr><font></font>
+                    <td>000002</td><font></font>
+                    <td>rata@alcantarilla.com</td><font></font>
+                    <td>+569878797</td><font></font>
+                </tr><font></font>
+                <tr><font></font>
+                    <td>000003</td><font></font>
+                    <td>backyardigan@gmail.com</td><font></font>
+                    <td>+569256447</td><font></font>
+                </tr><font></font>
+                <tr><font></font>
+                    <td>000004</td><font></font>
+                    <td>rupertina@gmail.com</td><font></font>
+                    <td>+569256447</td><font></font>
+                </tr><font></font>
+                <tr><font></font>
+                    <td>000005</td><font></font>
+                    <td>franco.el@grila.com</td><font></font>
+                    <td>+5694541225</td><font></font>
+                </tr><font></font>
+                <tr><font></font>
+                    <td>000006</td><font></font>
+                    <td>elgato.felix@kesillos.com</td><font></font>
+                    <td>+5698752547</td><font></font>
+                </tr><font></font>
+                <tr><font></font>
+                    <td>000007</td><font></font>
+                    <td>di.maria@gmail.com</td><font></font>
+                    <td>+569588511</td><font></font>
+                </tr><font></font>
+                <tr><font></font>
+                    <td>000008</td><font></font>
+                    <td>maria.esp@gmail.com</td><font></font>
+                    <td>+569755847</td><font></font>
+                </tr><font></font>
+                <tr><font></font>
+                    <td>000009</td><font></font>
+                    <td>el.brayatan@chorizo.com</td><font></font>
+                    <td>+5696665747</td><font></font>
+                </tr><font></font>
+                <tr><font></font>
+                    <td>000010</td><font></font>
+                    <td>felipin@gmail.com</td><font></font>
+                    <td>+5694774827</td><font></font>
+                </tr><font></font>
+            </tbody><font></font>
+        </table><font></font>
+       
+        
             <form action="">
                 <input type="number" placeholder="idasistente">
                 <input type="text" placeholder="Nombre Completo">
@@ -60,6 +88,8 @@
                 <input type="number" placeholder="Telefono">
                 <input type="text" placeholder="fecha-hora y cliente">
             </form>
+            <button>Crear</button>
+            <button>Eliminar</button>
         </div>
         <button>Crear</button>
         <button>Eliminar</button>
@@ -68,8 +98,13 @@
         Mr. Segurito &copy; Les Cuates -
          <script>
              document.write(new Date().getFullYear())
+
+             $(document).ready( function () {
+               $('#myTable').DataTable();
+            } );
          </script>
     </footer>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 
 </body>
 </html>
