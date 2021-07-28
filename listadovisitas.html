@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8d20d6c8c4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/estilos.css">
+    <!-- <link rel="stylesheet" href="css/estilos.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Visitas</title>
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <div class="cont-img">
             <img src="https://sermesa.es/wp-content/uploads/2019/09/prevencion-riesgos-laborales-importancia.jpg" alt="" srcset="">
         </div>
-    </header>
+    </header> -->
 
-    <nav>
+    <!-- <nav>
         <a onclick="menu()"><i class="fas fa-bars"></i></a>
 
         <div id="op-menu" class="ocultar-menu">
@@ -30,56 +31,125 @@
             <a href="listadopago.html">Pagos</a>
             <a href="contacto.html">Contacto</a>
         </div>
+    </nav> -->
+
+    <!-- navbar bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mr. Segurito</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Usuario
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="crearusuario.html">Crear Usuario</a></li>
+                            <li><a class="dropdown-item" href="listadousuarios.html">Listar usuarios</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Capacitación
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="crearcapacitacion.html">Crear Capacitación</a></li>
+                            <li><a class="dropdown-item" href="listarcapacitaciones.html">Listar Capacitaciones</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listadovisitas.html">Listado Visitas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listadopago.html">Pagos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Listado de visitas</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <table id="list-visitas" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID </th>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Hora</th>
+                                <th scope="col">Rut Cliente</th>
+                                <th scope="col">Nombre Cliente</th>
+                                <th scope="col">Listado chequeos</th>
+                            </tr>
+                        </thead>
 
-    <div class="contenedor-tab">
-        <h3>Listado de visitas</h3>
-        <section>
-            <table>
-                <tr>
-                    <th>ID </th>
-                    <th>Fecha</th>
-                    <th>Hora</th>
-                    <th>Rut Cliente</th>
-                    <th>Nombre Cliente</th>
-                    <th>Listado chequeos</th>
-                </tr>
-                <tr>
-                    <td class="inif">1</td>
-                    <td>19-07-2021</td>
-                    <td>13:30</td>
-                    <td class="finf">111111111</td>
-                    <td>
-                        Cliente 1
-                    </td>
-                    <td><a href="responderchecklist.html" onclick="return confirm(mensaje())"><i class="fas fa-eye"></i></a></td>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>19-07-2021</td>
+                                <td>13:30</td>
+                                <td>111111111</td>
+                                <td>
+                                    Cliente 1
+                                </td>
+                                <td><a href="responderchecklist.html" onclick="return confirm(mensaje())"><i class="fas fa-eye"></i></a></td>
 
-                </tr>
-                <tr>
-                    <td class="inif">2</td>
-                    <td>15-07-2021</td>
-                    <td>12:30</td>
-                    <td class="finf">222222222</td>
-                    <td>
-                        Cliente 2
-                    </td>
-                    <td><a href="responderchecklist.html" onclick="return confirm(mensaje())"><i class="fas fa-eye"></i></a></td>
-                </tr>
-                <tr>
-                    <td class="inif">3</td>
-                    <td>16-07-2021</td>
-                    <td>14:30</td>
-                    <td class="finf">333333333</td>
-                    <td>
-                        Cliente 3
-                    </td>
-                    <td><a href="responderchecklist.html" onclick="return confirm(mensaje())"><i class="fas fa-eye"></i></a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>15-07-2021</td>
+                                <td>12:30</td>
+                                <td>222222222</td>
+                                <td>
+                                    Cliente 2
+                                </td>
+                                <td><a href="responderchecklist.html" onclick="return confirm(mensaje())"><i class="fas fa-eye"></i></a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>16-07-2021</td>
+                                <td>14:30</td>
+                                <td>333333333</td>
+                                <td>
+                                    Cliente 3
+                                </td>
+                                <td><a href="responderchecklist.html" onclick="return confirm(mensaje())"><i class="fas fa-eye"></i></a></td>
 
-                </tr>
-            </table>
+                            </tr>
+                        </tbody>
 
-        </section>
-    </div>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <button type="button" class="btn btn-link" onclick="exportToTxt()">Exportar a txt</button>
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-link" onclick="exportToCsv()">Exportar a csv</button>
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-link" onclick="exportToExcel()">Exportar a Excel</button>
+                </div>
+            </div>
+
+    </section>
 
     <script>
         function mensaje() {
@@ -93,8 +163,22 @@
             document.write(new Date().getFullYear())
         </script>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <script>
+    <script type="text/javascript" src="js/FileSaver.js"></script>
+    <script type="text/javascript" src="libs/js-xlsx/xlsx.core.min.js"></script>
+    <script type="text/javascript" src="js/tableExport.min.js"></script>
+
+
+
+
+
+    <script src="js/listadovisitas.js"></script>
+
+
+
+    <!-- <script>
         function menu() {
 
             let elem = document.getElementById('op-menu');
@@ -107,7 +191,7 @@
                 elem.classList.add("mostrar-menu");
             }
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
