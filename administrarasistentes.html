@@ -10,11 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <div class="cont-img">
-            <img src="https://sermesa.es/wp-content/uploads/2019/09/prevencion-riesgos-laborales-importancia.jpg" alt="" srcset="">
-        </div>
-    </header>
+ 
     <div class="form-asesoria">
         <h3>Listado asistentes</h3>
         <table id="table_id" class="display"><font></font>
@@ -81,30 +77,32 @@
        
         
             <form action="">
-                <input type="number" placeholder="idasistente">
-                <input type="text" placeholder="Nombre Completo">
-                <input type="number" placeholder="Edad">
-                <input type="text" placeholder="Correo Electronico">
-                <input type="number" placeholder="Telefono">
-                <input type="text" placeholder="fecha-hora y cliente">
+                <input type="number" id="id" placeholder="idasistente">
+                <input type="text" id="nombre" placeholder="Nombre Completo" onkeyup="contador_caracteres()" maxlength="150">
+                
+                <input type="number" id="edad" placeholder="Edad">
+                <input type="text" id="correo" placeholder="Correo Electronico">
+                <span id="correook"></span>
+                <input type="number" id="telefono" placeholder="+569XXXXXXXX">
+                <input type="text" id="fech" placeholder="fecha-hora y cliente">
             </form>
-            <button>Crear</button>
+            <button onclick="validar()">Crear</button>
             <button>Eliminar</button>
-        </div>
-        <button>Crear</button>
-        <button>Eliminar</button>
+        
     </div>
     <footer>
         Mr. Segurito &copy; Les Cuates -
          <script>
-             document.write(new Date().getFullYear())
+             document.write(new Date().getFullYear());
 
              $(document).ready( function () {
-               $('#myTable').DataTable();
-            } );
+             $('#myTable').DataTable();
+             } );
          </script>
     </footer>
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/adminasistentes.js"></script>
 
 </body>
 </html>
